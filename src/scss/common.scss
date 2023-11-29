@@ -1,0 +1,51 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.block-header {
+  display: grid;
+  gap: toRem(24);
+
+  // .block-header--center
+  &--center {
+  }
+
+  &--inline {
+    grid-template-columns: minmax(auto, toRem(586)) minmax(auto, toRem(613));
+    justify-content: space-between;
+    gap: toRem(24);
+    align-items: end;
+  }
+
+  // .block-header__title
+  &__title {
+    color: $darkColor;
+    font-weight: 700;
+    line-height: 123%;
+    @include adaptiveValue("font-size", 52, 32);
+  }
+
+  // .block-header__title--big
+  &__title--big {
+    @include adaptiveValue("font-size", 64, 44);
+  }
+
+  // .block-header__title--white
+  &__title--white {
+    color: #fff;
+  }
+
+  // .block-header__text
+  &__text {
+    p {
+      line-height: 155%;
+    }
+  }
+}
+
+/*
+<div class="block-header">
+    <h2 class="block-header__title"></h2>
+        <div class="block-header__text">
+            <p></p>
+        </div>
+</div>
+*/
