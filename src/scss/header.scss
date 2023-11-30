@@ -73,11 +73,12 @@
       height: 100%;
       row-gap: toRem(40);
       top: 0;
-      left: 0;
+      left: 100%;
       background-color: $bgColorSemi;
       display: flex;
       flex-direction: column;
       overflow: auto;
+      transition: left 0.5s;
 
       &::before {
         content: "";
@@ -85,9 +86,17 @@
         width: 100%;
         height: toRem(55);
         top: 0;
-        left: 0;
+        left: 100%;
         z-index: 2;
         background-color: $bgColor;
+      }
+
+      .menu-open & {
+        left: 0;
+
+        &::before {
+          left: 0;
+        }
       }
     }
   }
@@ -127,4 +136,51 @@
 }
 
 .icon-menu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: toRem(30);
+    height: toRem(18);
+    z-index: 5;
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: toRem(2);
+      background-color: #fff;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - toRem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - toRem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - toRem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
 }

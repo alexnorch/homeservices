@@ -6,6 +6,7 @@
 
   // .block-header--center
   &--center {
+    text-align: center;
   }
 
   &--inline {
@@ -25,7 +26,7 @@
 
   // .block-header__title--big
   &__title--big {
-    @include adaptiveValue("font-size", 64, 44);
+    @include adaptiveValue("font-size", 64, 38);
   }
 
   // .block-header__title--white
@@ -49,3 +50,19 @@
         </div>
 </div>
 */
+
+.done {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: toRem(40);
+  row-gap: toRem(8);
+
+  // .done__item
+  &__item {
+    color: $bgColorLight;
+    padding-left: toRem(32);
+    line-height: 1.3;
+    font-size: toRem(20);
+    background: url("@img/icons/check.svg") left no-repeat;
+  }
+}
