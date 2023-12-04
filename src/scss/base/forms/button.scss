@@ -21,9 +21,15 @@
   }
 
   &--white {
+    background-color: #fff;
+    color: $bgColorLight;
   }
 
   &--min {
+  }
+
+  &--fw {
+    width: 100%;
   }
 
   &--icon {

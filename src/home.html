@@ -5,7 +5,7 @@
     <div class="wrapper">
       @@include('html/_header.htm',{})
       <main class="page">
-        <section class="hero">
+        <section data-watch="navigator" class="hero">
           <div class="hero__image hero__image-ibg">
             <img src="@img/hero-image-left.png" alt="" />
           </div>
@@ -76,10 +76,10 @@
             <div class="decor-hero__item"></div>
           </div>
         </section>
-        <div class="services">
-          <div class="services__container">
-            <div class="services__body">
-              <div class="services__block-header block-header">
+        <section data-watch="navigator" class="about">
+          <div class="about__container">
+            <div class="about__body">
+              <div class="about__block-header block-header">
                 <h2 class="block-header__title">
                   Professional for your home services
                 </h2>
@@ -91,24 +91,232 @@
                   </p>
                 </div>
               </div>
-              <ul class="services__items">
-                <li class="services__item">Repair and Installation</li>
-                <li class="services__item">Maintenance</li>
-                <li class="services__item">Home Security Services</li>
-                <li class="services__item">Plumbing</li>
-                <li class="services__item">Budget-friendly</li>
-                <li class="services__item">Eco-friendly solutions</li>
+              <ul class="about__items">
+                <li class="about__item">Repair and Installation</li>
+                <li class="about__item">Maintenance</li>
+                <li class="about__item">Home Security Services</li>
+                <li class="about__item">Plumbing</li>
+                <li class="about__item">Budget-friendly</li>
+                <li class="about__item">Eco-friendly solutions</li>
               </ul>
-              <div class="services__info">
+              <div class="about__info">
                 We already 24 hours fast services to help you. You can contact
-                us at <a href="#"> (888) 617-5894</a>
+                us at <a href="tel:8886175894">(888) 617-5894</a>
               </div>
             </div>
-            <div class="services__image">
-              <img src="@img/services/background.png" alt="" />
+            <div class="about__image">
+              <img src="@img/about/background.png" alt="" />
             </div>
           </div>
-        </div>
+        </section>
+        <section data-watch="navigator" class="services">
+          <div class="services__container">
+            <div
+              class="services__block-header block-header block-header--center"
+            >
+              <h2 class="block-header__title">Our Services</h2>
+              <div class="block-header__text">
+                <p>
+                  You have problems with leaking pipes, broken tiles, lost keys
+                  or want to tidy up the trees around you, of course you need
+                  our help!
+                </p>
+              </div>
+            </div>
+            <div class="services__items">
+              <article class="services__item item-service">
+                <div class="item-service__icon">
+                  <img src="@img/services/icons/icon-01.svg" alt="" />
+                </div>
+                <h4 class="item-service__title">Plumbing services</h4>
+                <div class="item-service__text">
+                  <p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+                </div>
+              </article>
+              <article class="services__item item-service">
+                <div class="item-service__icon">
+                  <img src="@img/services/icons/icon-02.svg" alt="" />
+                </div>
+                <h4 class="item-service__title">Plumbing services</h4>
+                <div class="item-service__text">
+                  <p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+                </div>
+              </article>
+              <article class="services__item item-service">
+                <div class="item-service__icon">
+                  <img src="@img/services/icons/icon-03.svg" alt="" />
+                </div>
+                <h4 class="item-service__title">Plumbing services</h4>
+                <div class="item-service__text">
+                  <p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+                </div>
+              </article>
+              <article class="services__item item-service">
+                <div class="item-service__icon">
+                  <img src="@img/services/icons/icon-04.svg" alt="" />
+                </div>
+                <h4 class="item-service__title">Plumbing services</h4>
+                <div class="item-service__text">
+                  <p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+                </div>
+              </article>
+              <article class="services__item item-service">
+                <div class="item-service__icon">
+                  <img src="@img/services/icons/icon-05.svg" alt="" />
+                </div>
+                <h4 class="item-service__title">Plumbing services</h4>
+                <div class="item-service__text">
+                  <p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+                </div>
+              </article>
+              <article class="services__item item-service">
+                <div class="item-service__icon">
+                  <img src="@img/services/icons/icon-06.svg" alt="" />
+                </div>
+                <h4 class="item-service__title">Plumbing services</h4>
+                <div class="item-service__text">
+                  <p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+                </div>
+              </article>
+              <article class="services__item item-service">
+                <div class="item-service__icon">
+                  <img src="@img/services/icons/icon-07.svg" alt="" />
+                </div>
+                <h4 class="item-service__title">Plumbing services</h4>
+                <div class="item-service__text">
+                  <p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+                </div>
+              </article>
+              <article class="services__item item-service item-service--blue">
+                <h4 class="item-service__title">Plumbing services</h4>
+                <div class="item-service__text">
+                  <p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+                </div>
+                <a
+                  href=""
+                  class="item-service__button button button--min button--fw button--white"
+                  >Call Us Now</a
+                >
+              </article>
+            </div>
+          </div>
+        </section>
+        <section data-watch="navigator" class="advantages">
+          <div class="advantages__body">
+            <div class="advantages__container">
+              <div
+                class="advantages__block-header block-header block-header--inline"
+              >
+                <h2 class="block-header__title block-header__title--white">
+                  Fast, Friendly, and Satisfaction Guarantee
+                </h2>
+                <div class="block-header__text">
+                  <p>
+                    No matter how big or small your work is, whether it's for
+                    the interior or exterior of your home, we are ready to serve
+                    and help you solve your home problems.
+                  </p>
+                </div>
+              </div>
+              <div class="advantages__items">
+                <div class="advantages__item advantages-item">
+                  <div class="advantages-item__icon">
+                    <img src="@img/advantages/icons/icon-01.svg" alt="Image" />
+                  </div>
+                  <div class="advantages-item__body">
+                    <h4 class="advantages-item__title">
+                      Satisfaction Guarantee
+                    </h4>
+                    <div class="advantages-item__text">
+                      <p>
+                        you don't need to worry about scams or our performance
+                        results. our company has been verified and strives for
+                        optimal results
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantages__item advantages-item">
+                  <div class="advantages-item__icon">
+                    <img src="@img/advantages/icons/icon-02.svg" alt="Image" />
+                  </div>
+                  <div class="advantages-item__body">
+                    <h4 class="advantages-item__title">Free Quotes</h4>
+                    <div class="advantages-item__text">
+                      <p>
+                        Get personalized cost estimates without any obligation.
+                        Experience transparency and peace of mind as you explore
+                        our service.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantages__item advantages-item">
+                  <div class="advantages-item__icon">
+                    <img src="@img/advantages/icons/icon-03.svg" alt="Image" />
+                  </div>
+                  <div class="advantages-item__body">
+                    <h4 class="advantages-item__title">Local Professionals</h4>
+                    <div class="advantages-item__text">
+                      <p>
+                        Our services cover the Nationwide, US area, including
+                        urban, suburban, and rural locations for both long and
+                        short term maintenance
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantages__item advantages-item">
+                  <div class="advantages-item__icon">
+                    <img src="@img/advantages/icons/icon-04.svg" alt="Image" />
+                  </div>
+                  <div class="advantages-item__body">
+                    <h4 class="advantages-item__title">Fast 24-Hour Service</h4>
+                    <div class="advantages-item__text">
+                      <p>
+                        need fast handling for repairs to drains, leaks or
+                        something else? Our experts are available anytime to
+                        help you solve the problem
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantages__item advantages-item">
+                  <div class="advantages-item__icon">
+                    <img src="@img/advantages/icons/icon-05.svg" alt="Image" />
+                  </div>
+                  <div class="advantages-item__body">
+                    <h4 class="advantages-item__title">
+                      Flexible Appointments
+                    </h4>
+                    <div class="advantages-item__text">
+                      <p>
+                        We offer convenient appointment times that can
+                        accommodate your busy schedule, day or night, 7 days a
+                        week.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantages__item advantages-item">
+                  <div class="advantages-item__icon">
+                    <img src="@img/advantages/icons/icon-06.svg" alt="Image" />
+                  </div>
+                  <div class="advantages-item__body">
+                    <h4 class="advantages-item__title">100% Commitment-Free</h4>
+                    <div class="advantages-item__text">
+                      <p>
+                        You are free to ask us about the problems you are
+                        facing. We offer a no-commitment approach to put your
+                        mind at ease
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('html/_footer.htm',{})
     </div>
