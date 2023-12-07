@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "image": "img/blog/image-01.jpg",
+      "title": "Understanding Smart Home Systems & Maintenance",
+      "url": "https://www.google.com/",
+      "date": "19 Jan 2023",
+      "text": "<p>Discover the ultimate guide to troubleshooting common smart home issues in our latest blog post. From connectivity problems to device malfunctions</p>",
+      "tags": {
+        "Plumbing": "https://www.google.com/",
+        "Architecture": "https://www.google.com/",
+        "Maintenance": "https://www.google.com/"
+      }
+    },
+    {
+      "id": 2,
+      "image": "img/blog/image-02.jpg",
+      "title": "Understanding Smart Home Systems & Maintenance",
+      "url": "https://www.google.com/",
+      "date": "19 Jan 2023",
+      "text": "<p>Discover the ultimate guide to troubleshooting common smart home issues in our latest blog post. From connectivity problems to device malfunctions</p>",
+      "tags": {
+        "Plumbing": "https://www.google.com/"
+      }
+    },
+    {
+      "id": 3,
+      "image": "img/blog/image-03.jpg",
+      "title": "Understanding Smart Home Systems & Maintenance",
+      "url": "https://www.google.com/",
+      "date": "19 Jan 2023",
+      "text": "<p>Discover the ultimate guide to troubleshooting common smart home issues in our latest blog post. From connectivity problems to device malfunctions</p>",
+      "tags": {
+        "Plumbing": "https://www.google.com/",
+        "Maintenance": "https://www.google.com/"
+      }
+    },
+    {
+      "id": 4,
+      "image": "img/blog/image-02.jpg",
+      "title": "Understanding Smart Home Systems & Maintenance",
+      "url": "https://www.google.com/",
+      "date": "19 Jan 2023",
+      "text": "<p>Discover the ultimate guide to troubleshooting common smart home issues in our latest blog post. From connectivity problems to device malfunctions</p>",
+      "tags": {
+        "Plumbing": "https://www.google.com/",
+        "Architecture": "https://www.google.com/",
+        "Maintenance": "https://www.google.com/"
+      }
+    }
+  ]
+}
