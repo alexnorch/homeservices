@@ -16,11 +16,42 @@
 
   // .hero__image
   &__image-ibg {
+    position: relative;
     @include adaptiveValue("width", 412, 200, 0, $containerWidth, 991.98);
     border-radius: toRem(24);
     overflow: hidden;
+
     img {
       object-position: top;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    &--left {
+      &::after {
+        background-image: linear-gradient(
+          -35deg,
+          #131f4b 4.15%,
+          rgba(19, 31, 75, 0) 43.25%
+        );
+      }
+    }
+
+    &--right {
+      &::after {
+        background-image: linear-gradient(
+          35deg,
+          #131f4b 4.15%,
+          rgba(19, 31, 75, 0) 43.25%
+        );
+      }
     }
 
     @media (max-width: $tablet) {
@@ -538,5 +569,272 @@
 
   // .advantages-item__text
   &__text {
+  }
+}
+
+//====================================================================================================
+// How section
+//====================================================================================================
+
+.how {
+  @include adaptiveValue("padding-top", 160, 30);
+  @include adaptiveValue("padding-bottom", 155, 30);
+  // .how__container
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: auto;
+      gap: toRem(30);
+    }
+  }
+
+  // .how__image
+  &__image {
+    img {
+      max-width: 100%;
+      transform: translate(-10%, 0);
+    }
+
+    @media (max-width: $tablet) {
+      order: 2;
+
+      img {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  // .how__content
+  &__content {
+    @media (max-width: $tablet) {
+      order: 1;
+    }
+  }
+
+  // .how__block-header
+  &__block-header {
+    max-width: toRem(400);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 30);
+    }
+  }
+
+  // .how__list
+  &__list {
+  }
+}
+
+.list-how {
+  display: grid;
+  @include adaptiveValue("gap", 50, 20);
+  @extend %listCounter;
+
+  // .list-how__item
+  &__item {
+    @include adaptiveValue("padding-left", 70, 40);
+    display: grid;
+    grid-template-columns: toRem(170) auto;
+    gap: toRem(35);
+
+    &::before {
+      @include adaptiveValue("font-size", 52, 30);
+      font-weight: 700;
+      color: $greyColor;
+    }
+
+    @media (max-width: em(520)) {
+      grid-template-columns: auto;
+      gap: toRem(5);
+    }
+  }
+
+  // .list-how__title
+  &__title {
+    @include adaptiveValue("font-size", 24, 18);
+    color: $darkColor;
+    line-height: 133.33%;
+    font-weight: 700;
+  }
+
+  // .list-how__text
+  &__text {
+  }
+}
+
+//========================================================================================================================================================
+
+.reviews {
+  @include adaptiveValue("padding-top", 130, 40);
+  @include adaptiveValue("padding-bottom", 130, 40);
+
+  // .reviews__container
+  &__container {
+    max-width: toRem(1160);
+  }
+
+  &__body {
+    position: relative;
+
+    @media (min-width: em(600)) {
+      padding: 0 toRem(72);
+    }
+  }
+
+  &__bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: toRem(12);
+    row-gap: toRem(3);
+
+    .swiper-pagination-bullet {
+      transition: all 0.3s;
+      flex: 0 0 toRem(12);
+      height: toRem(12);
+      border-radius: 50%;
+      background: #e3e5f0;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $bgColorLight;
+      flex: 0 0 toRem(40);
+      border-radius: toRem(10);
+    }
+  }
+
+  // .reviews__block-header
+  &__block-header {
+    max-width: toRem(650);
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 90, 30);
+    }
+  }
+
+  // .reviews__slider
+  &__slider {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 90, 30);
+    }
+  }
+
+  // .reviews__wrapper
+  &__wrapper {
+  }
+
+  // .reviews__slide
+  &__slide {
+  }
+
+  // .reviews__arrow
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    width: toRem(48);
+    height: toRem(48);
+    border-radius: 50%;
+    transform: translate(0px, -50%);
+    background: $bgColorLight url("@img/icons/arrow.svg") center no-repeat;
+    // .reviews__arrow--left
+    &--left {
+      left: 0;
+    }
+
+    // .reviews__arrow--right
+    &--right {
+      right: 0;
+      transform: translate(0px, -50%) rotate(-180deg);
+    }
+
+    &.swiper-button-disabled {
+      background: #e3e5f0 url("@img/icons/arrow.svg") center no-repeat;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    @media (max-width: em(600)) {
+      display: none;
+    }
+  }
+}
+
+.slide-reviews {
+  text-align: center;
+
+  // .slide-reviews__logo
+  &__logo {
+    position: relative;
+    text-align: center;
+    padding-bottom: toRem(25);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 25);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        rgba(20, 34, 87, 0) 0%,
+        $greyColor 50%,
+        rgba(20, 34, 87, 0) 100%
+      );
+    }
+  }
+
+  // .slide-reviews__text
+  &__text {
+    max-width: toRem(730);
+    display: inline-block;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 20);
+    }
+  }
+
+  // .slide-reviews__author
+  &__author {
+    text-align: left;
+    display: inline-flex;
+    gap: toRem(32);
+  }
+
+  // .slide-reviews__avatar
+  &__avatar {
+    flex: 0 0 toRem(76);
+    height: toRem(76);
+    border-radius: 50%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  // .slide-reviews__body
+  &__body {
+  }
+
+  // .slide-reviews__name
+  &__name {
+    @include adaptiveValue("font-size", 24, 18);
+    font-weight: 700;
+    line-height: 133.33%;
+    color: $darkColor;
+  }
+
+  // .slide-reviews__rating
+  &__rating {
+    .rating__value {
+      display: none;
+    }
   }
 }
