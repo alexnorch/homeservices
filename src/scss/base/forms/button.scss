@@ -26,6 +26,10 @@
   }
 
   &--min {
+    font-size: toRem(18);
+    line-height: 133.333%;
+    padding: toRem(8) toRem(24);
+    min-height: 0;
   }
 
   &--fw {
