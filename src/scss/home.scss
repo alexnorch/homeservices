@@ -985,3 +985,175 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.faq {
+  @include adaptiveValue("padding-top", 190, 40);
+  @include adaptiveValue("padding-bottom", 230, 40);
+  // .faq__container
+  &__container {
+    display: grid;
+    grid-template-columns: auto 57.847%;
+    align-items: start;
+    column-gap: toRem(20);
+    column-gap: toRem(30);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: auto;
+    }
+  }
+
+  // .faq__block-header
+  &__block-header {
+  }
+
+  // .faq__spollers
+  &__spollers {
+  }
+}
+
+.spollers-faq {
+  display: grid;
+  gap: toRem(12);
+
+  // .spollers-faq__item
+  &__item {
+    border-radius: toRem(12);
+    padding: toRem(24) toRem(32);
+    transition: background-color 0.8s;
+
+    &[open] {
+      background-color: #f3f5f9;
+
+      .spollers-faq__title {
+        padding-bottom: toRem(16);
+      }
+    }
+
+    @media (max-width: $mobileSmall) {
+      padding: toRem(15) toRem(24);
+    }
+  }
+
+  // .spollers-faq__title
+  &__title {
+    transition: all 0.5s;
+    font-weight: 700;
+    list-style: none;
+    padding-right: toRem(30);
+    @include adaptiveValue("font-size", 24, 18);
+
+    ._spoller-init & {
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      text-align: left;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: toRem(12);
+        height: toRem(1);
+        transition: all 0.3s ease 0s;
+        width: toRem(10);
+        background-color: #000;
+      }
+      &::before {
+        transform: rotate(40deg);
+        right: toRem(7);
+      }
+      &::after {
+        transform: rotate(-40deg);
+      }
+    }
+    &._spoller-active {
+      &::before {
+        transform: rotate(-40deg);
+      }
+      &::after {
+        transform: rotate(40deg);
+      }
+    }
+  }
+
+  // .spollers-faq__body
+  &__body {
+    font-size: toRem(16);
+    padding-top: toRem(16);
+    line-height: 150%;
+  }
+}
+
+//========================================================================================================================================================
+
+.contact-us {
+  background-color: $bgColor;
+  position: relative;
+
+  // .contact-us__container
+  &__container {
+    @media (min-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include adaptiveValue("gap", 100, 30);
+    }
+  }
+
+  // .contact-us__content
+  &__content {
+    position: relative;
+    z-index: 2;
+    @include adaptiveValue("padding-top", 165, 40);
+    @include adaptiveValue("padding-bottom", 105, 40);
+
+    &::before {
+      content: "";
+      background: url("@img/contact/decoration.png") 0 0 / 83% no-repeat;
+      width: 100%;
+      aspect-ratio: 581 / 44;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  // .contact-us__block-header
+  &__block-header {
+    &:not(:last-child) {
+      margin-bottom: toRem(16);
+    }
+  }
+
+  // .contact-us__done
+  &__done {
+    &:not(:last-child) {
+      margin-bottom: toRem(24);
+    }
+  }
+
+  // .contact-us__image
+  &__image {
+    img {
+      max-width: 100%;
+    }
+
+    @media (min-width: $tablet) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include adaptiveValue("gap", 100, 30);
+
+      img {
+        grid-column: 2 / 3;
+        justify-self: end;
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
